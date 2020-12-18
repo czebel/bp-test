@@ -2,7 +2,7 @@
 
 <!-- You have to put this piece of JavaScript code into your web page
 Note: Use <!DOCTYPE html> on the page where snippet located for better rendering
--->
+
 <link type="text/css" rel="stylesheet" href="https://randstadtech.brightpattern.com/clientweb/chat-client-v4/css/form.css">
 <script type="text/javascript">
     SERVICE_PATTERN_CHAT_CONFIG = {
@@ -19,5 +19,32 @@ Note: Use <!DOCTYPE html> on the page where snippet located for better rendering
          phone_number: ''
  		*/
     };
+</script> 
+<script src="https://randstadtech.brightpattern.com/clientweb/chat-client-v4/js/init.js"></script>   -->
+
+<script language="JavaScript">
+function getQueryString() {
+  var result = {}, queryString = location.search.slice(1),
+      re = /([^&=]+)=([^&]*)/g, m;
+  while (m = re.exec(queryString)) {
+    result[decodeURIComponent(m[1])] = decodeURIComponent(m[2]);
+  }
+  return result;
+}
+var url_params = getQueryString();
+</script>   
+
+<!-- You have to put this piece of JavaScript code into your web page
+Note: Use <!DOCTYPE html> on the page where snippet located for better rendering
+-->
+<link type="text/css" rel="stylesheet" href="https://randstad.brightpattern.com/clientweb/chat-client-v4/css/form.css">
+<script type="text/javascript">
+    SERVICE_PATTERN_CHAT_CONFIG = {
+        appId: '47e4abd8bfeb4aba96379ed3b1681216',
+        apiUrl: 'https://randstad.brightpattern.com/clientweb/api/v1',
+        tenantUrl: 'randstad.brightpattern.com',
+        chatPath: 'https://randstad.brightpattern.com/clientweb/chat-client-v4/',
+       parameters: url_params
+    };
 </script>
-<script src="https://randstadtech.brightpattern.com/clientweb/chat-client-v4/js/init.js"></script> 
+<script src="https://randstad.brightpattern.com/clientweb/chat-client-v4/js/init.js"></script> 
